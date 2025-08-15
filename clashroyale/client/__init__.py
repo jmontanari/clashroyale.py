@@ -1,0 +1,1 @@
+from clashroyale.client.clash_royale_client import ClashRoyaleClient as ClashRoyaleClient

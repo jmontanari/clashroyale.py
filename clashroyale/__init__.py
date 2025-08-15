@@ -106,6 +106,10 @@ from clashroyale.api.locations_api import LocationsApi as LocationsApi
 from clashroyale.api.players_api import PlayersApi as PlayersApi
 from clashroyale.api.tournaments_api import TournamentsApi as TournamentsApi
 
+# import client
+from clashroyale.client.clash_royale_client import ClashRoyaleClient as ClashRoyaleClient
+
+
 # import ApiClient
 from clashroyale.api_response import ApiResponse as ApiResponse
 from clashroyale.api_client import ApiClient as ApiClient
