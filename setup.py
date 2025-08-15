@@ -43,7 +43,7 @@ setup(
     include_package_data=True,
     long_description_content_type='text/markdown',
     long_description="""\
-    Check out &lt;a href&#x3D;\&quot;https://developer.clashroyale.com/#/getting-started\&quot; target&#x3D;\&quot;_parent\&quot;&gt;Getting Started&lt;/a&gt; for instructions and links to other resources. Clash Royale API uses &lt;a href&#x3D;\&quot;https://jwt.io/\&quot; target&#x3D;\&quot;_blank\&quot;&gt;JSON Web Tokens&lt;/a&gt; for authorizing the requests. Tokens are created by developers on &lt;a href&#x3D;\&quot;https://developer.clashroyale.com/#/account\&quot; target&#x3D;\&quot;_parent\&quot;&gt;My Account&lt;/a&gt; page and must be passed in every API request in Authorization HTTP header using Bearer authentication scheme. Correct Authorization header looks like this: \&quot;Authorization: Bearer API_TOKEN\&quot;. 
-    """,  # noqa: E501
+    Clash Royale API
+    """,
     package_data={"clashroyale": ["py.typed"]},
 )
