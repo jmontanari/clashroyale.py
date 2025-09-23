@@ -79,8 +79,8 @@ class Player(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['not_member', 'member', 'leader', 'admin', 'coleader']):
-            raise ValueError("must be one of enum values ('not_member', 'member', 'leader', 'admin', 'coleader')")
+        if value not in set(['not_member', 'member', 'leader', 'elder', 'coLeader']):
+            raise ValueError("must be one of enum values ('not_member', 'member', 'leader', 'elder', 'coleader')")
         return value
 
     model_config = ConfigDict(

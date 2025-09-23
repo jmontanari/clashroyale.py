@@ -47,8 +47,8 @@ class ClanMember(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['not_member', 'member', 'leader', 'admin', 'coLeader']):
-            raise ValueError("must be one of enum values ('not_member', 'member', 'leader', 'admin', 'coLeader')")
+        if value not in set(['not_member', 'member', 'leader', 'elder', 'coLeader']):
+            raise ValueError("must be one of enum values ('not_member', 'member', 'leader', 'elder', 'coLeader')")
         return value
 
     model_config = ConfigDict(

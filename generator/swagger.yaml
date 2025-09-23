@@ -1166,7 +1166,7 @@ definitions:
           - not_member
           - member
           - leader
-          - admin
+          - elder
           - coleader
       wins:
         type: integer
