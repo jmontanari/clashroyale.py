@@ -53,7 +53,7 @@ class ClashRoyaleClient:
         return ClansApi(self.client)
 
     def get_global_tournaments_api(self) ->GlobaltournamentsApi:
-        return GlobaltournamentsApi(self.client)
+        return GlobaltournamentsApi(self.client).get_global_tournaments
 
     def get_leaderboards_api(self) ->LeaderboardsApi:
         return LeaderboardsApi(self.client)

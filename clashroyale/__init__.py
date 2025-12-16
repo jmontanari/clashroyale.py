@@ -13,8 +13,12 @@
     Do not edit the class manually.
 """  # noqa: E501
 
+from importlib.metadata import version, PackageNotFoundError
 
-__version__ = "1.0.2"
+try:
+    __version__ = version("clashroyale")
+except PackageNotFoundError:
+    __version__ = "0.0.0"  # Development fallback
 
 # Define package exports
 __all__ = [
@@ -35,6 +39,19 @@ __all__ = [
     "ApiKeyError",
     "ApiAttributeError",
     "ApiException",
+    # Events system
+    "Event",
+    "ClanEvents",
+    "PlayerEvents",
+    "WarEvents",
+    "ClientEvents",
+    "EventsClient",
+    "Maintenance",
+    "NotFound",
+    "InvalidTag",
+    "PrivateWarLog",
+    "correct_tag",
+    # Models
     "Arena",
     "Battle",
     "CancelMatchResponse",
@@ -117,6 +134,19 @@ from clashroyale.exceptions import ApiValueError as ApiValueError
 from clashroyale.exceptions import ApiKeyError as ApiKeyError
 from clashroyale.exceptions import ApiAttributeError as ApiAttributeError
 from clashroyale.exceptions import ApiException as ApiException
+
+# import events system
+from clashroyale.events import Event as Event
+from clashroyale.events import ClanEvents as ClanEvents
+from clashroyale.events import PlayerEvents as PlayerEvents
+from clashroyale.events import WarEvents as WarEvents
+from clashroyale.events import ClientEvents as ClientEvents
+from clashroyale.events_client import EventsClient as EventsClient
+from clashroyale.errors import Maintenance as Maintenance
+from clashroyale.errors import NotFound as NotFound
+from clashroyale.errors import InvalidTag as InvalidTag
+from clashroyale.errors import PrivateWarLog as PrivateWarLog
+from clashroyale.utils import correct_tag as correct_tag
 
 # import models into sdk package
 from clashroyale.models.arena import Arena as Arena
