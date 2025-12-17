@@ -2,9 +2,24 @@ from typing import List, Annotated
 
 from pydantic import StrictStr, Field
 
-from clashroyale import ApiClient, CardsApi, Items, ChallengesApi, ChallengeChain, ClansApi, Clan, ClanMember, \
-    ClanWarLogEntry, GlobaltournamentsApi, LeaderboardsApi, LocationsApi, PlayersApi, TournamentsApi, Configuration, \
-    Player
+# Import directly from submodules to avoid circular imports
+# (events_client imports this before __init__.py finishes loading)
+from clashroyale.api_client import ApiClient
+from clashroyale.configuration import Configuration
+from clashroyale.api.cards_api import CardsApi
+from clashroyale.api.challenges_api import ChallengesApi
+from clashroyale.api.clans_api import ClansApi
+from clashroyale.api.globaltournaments_api import GlobaltournamentsApi
+from clashroyale.api.leaderboards_api import LeaderboardsApi
+from clashroyale.api.locations_api import LocationsApi
+from clashroyale.api.players_api import PlayersApi
+from clashroyale.api.tournaments_api import TournamentsApi
+from clashroyale.models.items import Items
+from clashroyale.models.challenge_chain import ChallengeChain
+from clashroyale.models.clan import Clan
+from clashroyale.models.clan_member import ClanMember
+from clashroyale.models.clan_war_log_entry import ClanWarLogEntry
+from clashroyale.models.player import Player
 
 
 class ClashRoyaleClient:
